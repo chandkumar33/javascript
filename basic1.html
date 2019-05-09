@@ -10,19 +10,22 @@ body{margin:0; padding:0}
 <h1 id="demo"></h1>
 <br/><br/>
 
-
+<button onclick="myfunction()">Button</button>
 <script>
 
-var stds= ["Raj kumar","Swati","chand","pankaj","amit","abhishek", "rima", "geeta", "sonam","Rani Devi"];
-var list="<ul>";
-stds.forEach(makelist);
-list+="</ul>";
-
-document.getElementById("demo").innerHTML=list;
-
-function makelist(val){
-list+="<li>"+val+"</li>";
+function myfunction(){
+var tag = document.createElement("A");
+//<a></a>
+tag.setAttribute("href","www.chandkumarkoi.com");
+//<a href="www.chandkumarkoli.com"></a>
+var text = document.createTextNode("Link");
+//Link
+tag.appendChild(text);
+//<a href="www.chandkumarkoli.com">Link</a>
+document.body.appendChild(tag);
+//<a href="www.chandkumarkoli.com">Link</a>
 }
+
 </script>
 </body>
 </html>
