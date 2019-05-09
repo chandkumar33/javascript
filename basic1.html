@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+<head>
+<title>Basic</title>
+<style>
+body{margin:0; padding:0}
+</style>
+</head>
+<body>
+<h1 id="demo"></h1>
+<br/><br/>
+<h1>First Element:<span id="first"></span></h1>
+<h1>Last Element:<span id="last"></span></h1>
+
+<script>
+//var students = {FirstName:"chand",LastName:"kumar",age:"24",email:"rkkohli57@gmail.com"};
+
+var stds= ["Raj kumar","Swati","chand","pankaj","amit","abhishek", "rima", "geeta", "sonam","Rani Devi"];
+var list="<ul>";
+for(var i=0; i<stds.length; i++){
+	list+="<li>"+stds[i]+"</li>";
+}
+list+="</ul>";
+document.getElementById("demo").innerHTML=list;
+
+document.getElementById("first").innerHTML=stds[0];
+document.getElementById("last").innerHTML=stds[stds.length-1];
+</script>
+</body>
+</html>
