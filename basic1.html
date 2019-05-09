@@ -14,16 +14,10 @@ body{margin:0; padding:0}
 <script>
 
 function myfunction(){
-var tag = document.createElement("A");
-//<a></a>
-tag.setAttribute("href","www.chandkumarkoi.com");
-//<a href="www.chandkumarkoli.com"></a>
-var text = document.createTextNode("Link");
-//Link
-tag.appendChild(text);
-//<a href="www.chandkumarkoli.com">Link</a>
-document.body.appendChild(tag);
-//<a href="www.chandkumarkoli.com">Link</a>
+var t = document.createElement("input");
+t.setAttribute("type","text");
+t.setAttribute("placeholder","Enter Your Name");
+document.body.appendChild(t);
 }
 
 </script>
