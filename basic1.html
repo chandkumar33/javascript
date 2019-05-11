@@ -7,19 +7,29 @@ body{margin:0; padding:0}
 </style>
 </head>
 <body>
-<input id="tfield" pattern="[0-9a-zA-Z]{1,15}" required type="text" />
-<button onclick="myfun()">Click Me</button>
+<input type="text" id="pname" placeholder="enter property name" />
+<input type="text" id="vname" placeholder="enter value name" />
+
+<button onclick="add()">Add Item</button>
+
 <h1 id="show"></h1>
+<h1 id="show2"></h1>
 <script>
-function myfun(){
-	var val5 = document.getElementById("tfield");
-	if(val5.checkValidity()){
-		text = "<span style='color:green'>Input value okay</span>";
-	}else{
-		text = "<span style='color:red'>"+val5.validationMessage+"</span>";
-	}
-	document.getElementById("show").innerHTML=text;
-}
+
+var person = {
+FirstName:"Chand",
+ LastName:"Koli",
+ Age:24,
+ Email:"rkkohli57@gmail.com",
+ set myfun(value){
+ this.Email=value;
+ }
+ };
+ document.getElementById("show").innerHTML=person.Email;
+ person.myfun="sachin@gmail.com";
+ document.getElementById("show2").innerHTML=person.Email;
+ 
+
 
 
 
