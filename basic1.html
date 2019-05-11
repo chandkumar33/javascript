@@ -7,18 +7,21 @@ body{margin:0; padding:0}
 </style>
 </head>
 <body>
-<h1 id="demo"></h1>
-<br/><br/>
-
-<button onclick="myfunction()">Button</button>
+<input id="tfield" pattern="[0-9a-zA-Z]{1,15}" required type="text" />
+<button onclick="myfun()">Click Me</button>
+<h1 id="show"></h1>
 <script>
-
-function myfunction(){
-var t = document.createElement("input");
-t.setAttribute("type","text");
-t.setAttribute("placeholder","Enter Your Name");
-document.body.appendChild(t);
+function myfun(){
+	var val5 = document.getElementById("tfield");
+	if(val5.checkValidity()){
+		text = "<span style='color:green'>Input value okay</span>";
+	}else{
+		text = "<span style='color:red'>"+val5.validationMessage+"</span>";
+	}
+	document.getElementById("show").innerHTML=text;
 }
+
+
 
 </script>
 </body>
